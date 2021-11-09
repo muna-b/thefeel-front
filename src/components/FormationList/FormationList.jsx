@@ -11,7 +11,7 @@ const FormationList = () => {
     
     useEffect( () => {
         const fetchLessons = async() => {
-        const response = await fetch ('http://localhost:3001/lessons')
+        const response = await fetch (`${process.env.REACT_APP_API_URL}lessons`)
         const data = await response.json()
         setLessons(data)
         } 
@@ -25,7 +25,7 @@ const FormationList = () => {
                                         <h4>{lesson.title}</h4>
                                         <p>{lesson.description}</p>
                                     </div>)}
-            <button className = {classNames.button} onClick={ () => redirect ("/user/new")}> S'abonner </button>
+            <button className = {classNames.button} onClick={ () => redirect ("/registration")}> S'abonner </button>
         
         </section>
     )
