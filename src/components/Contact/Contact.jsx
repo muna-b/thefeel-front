@@ -55,7 +55,7 @@ function Contact() {
             <div className={classNames.mainContainer}>
             <div className = {classNames.test}>
             </div>
-            <button className = {classNames.contactButton}onClick={onClick}>Nous contacter <i class="far fa-edit"></i></button>
+            <button className = {classNames.contactButton}onClick={onClick}>Nous contacter <i className="far fa-edit"></i></button>
             <div className={classNames.container + (open ? "" : " " + classNames.disable)}>
                 <form onSubmit= {onChangeHandler}>
                     <div className={classNames.row}>
@@ -66,7 +66,6 @@ function Contact() {
                                     placeholder={object.label}
                                     type={object.type} 
                                     value={object.value}
-                                    defaultValue = {object.defaultValue}
                                     name={object.name} 
                                     onChange={ (ev) =>  object.onChange(ev.target.value) } 
                                     required={object.required} 
@@ -80,11 +79,10 @@ function Contact() {
                     <br/>
                     <div>
                         <select value = { select } onChange= { onClickSelect } name="" id="">
-                        <option value="" disabled selected>Seletionnez un objet</option>
-                            <option value="Avis">Avis</option>
+                        <option value="no" disabled>Seletionnez un objet</option>
+                            <option value="Informations">Informations</option>
                             <option value="Devis">Devis</option>
                             <option value="Partenariat">Partenariat</option>
-                            <option value="Informations">Informations générales</option>
                             <option value="Autres">Autres</option>
                         </select>
                     </div>
