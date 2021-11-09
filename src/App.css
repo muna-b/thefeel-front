@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style-type: none;
+}
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main{
+  flex-grow: 2;
+}
+footer{
+  bottom:0;
+  width: 100%;
+  
+}
+:root {
+  --violet: #fff;
+  --blue: #004AAD;
+  --breakpointTablet: 768px;
+  --defaultPadding: 1rem;
+}
