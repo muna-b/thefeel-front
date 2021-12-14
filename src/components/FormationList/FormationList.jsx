@@ -26,6 +26,7 @@ const FormationList = () => {
                                         <p>{lesson.description}</p>
                                     </div>)}
             <button className = {classNames.button} onClick={ () => redirect ("/registration")}> S'abonner </button>
+            <button className = {classNames.button} onClick={ () => redirect ("/login")}> Se connecter </button>
         
         </section>
     )
